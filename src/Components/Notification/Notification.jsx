@@ -53,22 +53,19 @@ const NotificationBar = () => {
 
 	return (
 		<>
-			<header className="fixed top-0 left-0 right-0 z-40 bg-[#1a0841] px-4 md:px-14 h-16 shadow-sm">
-				{/* center content and limit width so header doesn't feel too wide on large screens */}
-				<div className="max-w-6xl mx-auto w-full flex items-center justify-between">
-			{/* Left: Logo and Educrat */}
-			<div className="flex items-center gap-4">
-				<div className="w-12 h-12 rounded-full bg-[#6c4cf7] flex items-center justify-center">
-					<svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#6c4cf7"/><path d="M10 16l4 4 8-8" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+			<header className="fixed top-0 left-0 right-0 z-40 bg-[#1a0841] px-4 md:px-14 h-20 shadow-sm">
+				{/* logo placed absolutely at the viewport left so it stays flush */}
+				<div className="absolute left-3 md:left-6 top-1/2 transform -translate-y-1/2 flex items-center gap-3 z-50">
+					<div className="w-12 h-12 rounded-full bg-[#6c4cf7] flex items-center justify-center">
+						<svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#6c4cf7"/><path d="M10 16l4 4 8-8" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+					</div>
+					<span className="text-white font-bold text-lg tracking-tight">Awaz-Nepal</span>
 				</div>
-				<span className="text-white font-bold text-lg tracking-tight">Awaz-Nepal</span>
-				<button className="hidden md:flex items-center gap-1 text-[#00e6a0] font-medium ml-4">
-					<svg width="20" height="20" fill="none" stroke="#00e6a0" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-					Explore
-				</button>
-			</div>
+				{/* center content and limit width so header doesn't feel too wide on large screens */}
+				{/* add left padding so the centered nav doesn't get overlapped by the absolute logo */}
+				<div className="max-w-6xl mx-auto w-full relative pl-20 md:pl-28 flex items-center justify-between h-full">
 			{/* Center: Nav links (hidden on small screens) */}
-			<nav className="hidden md:flex flex-1 justify-center gap-8">
+				<nav className="hidden md:flex flex-1 justify-center gap-8 h-full items-center">
 				<a href="#" className="text-[#7c6ad6] font-medium hover:text-white transition">Home <span className="ml-1">▼</span></a>
 				<a href="#" className="text-white font-medium hover:text-[#00e6a0] transition">Courses <span className="ml-1">▼</span></a>
 				<a href="#" className="text-white font-medium hover:text-[#00e6a0] transition">Events <span className="ml-1">▼</span></a>
@@ -76,35 +73,36 @@ const NotificationBar = () => {
 				<a href="#" className="text-white font-medium hover:text-[#00e6a0] transition">Pages <span className="ml-1">▼</span></a>
 				<a href="#" className="text-white font-medium hover:text-[#00e6a0] transition">Contact</a>
 			</nav>
-			{/* Right: Search, Cart, Auth (hidden on small screens) + mobile toggle */}
-			<div className="flex items-center gap-6">
-				<button className="hidden md:inline text-white text-xl hover:text-[#00e6a0] transition">
+			{/* Right: Search, Cart, Auth (hidden on very small screens) + mobile toggle */}
+				<div className="flex items-center gap-6 h-full">
+				<button className="hidden sm:inline text-white text-xl hover:text-[#00e6a0] transition inline-flex items-center h-full">
 					<svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
 				</button>
-				<div className="hidden md:relative md:inline">
-					<button className="text-white text-xl hover:text-[#00e6a0] transition">
+				<div className="hidden sm:relative sm:inline">
+					<button className="text-white text-xl hover:text-[#00e6a0] transition inline-flex items-center h-full">
 						<svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-13z"/><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/></svg>
 					</button>
 					<span className="absolute -top-2 -right-2 bg-[#ff3b5c] text-white text-xs font-bold rounded-full px-1">0</span>
 				</div>
-				<a href="#" className="hidden md:inline text-white font-medium underline">Log in</a>
-				<a href="#" className="hidden md:inline ml-2 px-4 py-2 bg-white text-[#1a0841] rounded-md font-medium">Sign up</a>
+				<a href="#" className="hidden sm:inline text-white font-medium underline inline-flex items-center h-full">Log in</a>
+				<a href="#" className="hidden sm:inline ml-2 px-4 py-2 bg-white text-[#1a0841] rounded-md font-medium inline-flex items-center">Sign up</a>
 
-				{/* Mobile toggle button */}
+				{/* Mobile toggle button - pinned to the right so it can't overlap the logo/name */}
 				<button
-					className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/5"
+					className="md:hidden absolute right-3 top-1/2 transform -translate-y-1/2 z-50 inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/5"
 					aria-label="Open menu"
 					aria-expanded={open}
 					onClick={() => setOpen(true)}
 				>
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-					</button>
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+				</button>
 					</div>
 					{/* end inner container */}
 				</div>
 				</header>
 			{/* spacer with same height as header to avoid content being hidden under fixed header */}
-			<div aria-hidden className="h-16" />
+			{/* increased on small screens to add breathing room under the fixed header */}
+			<div aria-hidden className="h-20 md:h-16" />
 
 			{/* Mobile sidebar panel + overlay */}
 				<div

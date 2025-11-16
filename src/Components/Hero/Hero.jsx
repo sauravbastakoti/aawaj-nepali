@@ -3,8 +3,7 @@
 const Hero = () => {
 	return (
 		<>
-			{/* Divider line between navbar and hero */}
-			<div className="w-full border-b border-[#2a1767]" style={{marginTop: '-2px'}}></div>
+			{/* divider removed to avoid a visible seam under the fixed header */}
 			<section className="relative w-full bg-[#1a0841] min-h-[520px] md:min-h-[700px] px-4 sm:px-8 py-12 md:py-16 overflow-hidden">
 				{/* Large decorative circle behind buttons on left (hidden on small screens) */}
 				<div className="hidden md:block absolute md:left-[-140px] md:top-[120px] md:w-[600px] md:h-[600px] lg:left-[-180px] lg:top-[180px] lg:w-[700px] lg:h-[700px] rounded-full bg-gradient-to-br from-[#2a1767] via-[#2a1767] to-transparent opacity-80 z-0"></div>
