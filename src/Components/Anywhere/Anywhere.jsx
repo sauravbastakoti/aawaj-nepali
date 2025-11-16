@@ -7,10 +7,10 @@ export default function Anywhere() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* left devices */}
           <div className="lg:col-span-7 flex items-center justify-center">
-            <div className="relative flex items-center gap-6">
+            <div className="relative flex items-center gap-6 max-w-full">
               {/* phone */}
-              <div className="w-40 md:w-48 lg:w-56 transform -translate-x-6 lg:-translate-x-12 drop-shadow-md">
-                <div className="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm">
+              <div className="flex-shrink-0 w-28 sm:w-36 md:w-44 lg:w-56 h-64 md:h-72 lg:h-80 transform -translate-x-2 sm:-translate-x-4 md:-translate-x-6 lg:-translate-x-12 drop-shadow-md">
+                <div className="bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm w-full h-full">
                   <img
                     src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a4c2d2b"
                     alt="phone mock"
@@ -20,7 +20,7 @@ export default function Anywhere() {
               </div>
 
               {/* tablet */}
-              <div className="w-[520px] md:w-[640px] lg:w-[740px] bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+              <div className="w-full max-w-full md:max-w-[640px] lg:max-w-[740px] bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-200 flex-shrink-0">
                 <div className="w-full h-64 md:h-72 lg:h-80 bg-gradient-to-b from-[#0b0b1a] to-[#1a0633] flex items-center justify-center">
                   {/* Placeholder for the dark hero screenshot inside tablet */}
                   <img

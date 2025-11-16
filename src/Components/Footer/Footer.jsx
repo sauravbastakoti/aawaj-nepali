@@ -78,9 +78,9 @@ export default function Footer() {
             <h3 className="text-sm font-semibold mb-4">GET IN TOUCH</h3>
             <p className="text-[#cfc8e9] text-sm mb-4">We don’t send spam so don’t worry.</p>
 
-            <form className="flex items-center gap-3 max-w-md">
-              <input aria-label="Email" type="email" placeholder="Email..." className="flex-1 rounded-full px-4 py-3 text-sm text-[#1a0841] outline-none" />
-              <button type="submit" className="bg-[#6c4cf7] text-white px-4 py-2 rounded-full text-sm">Submit</button>
+            <form className="flex flex-col sm:flex-row items-center gap-3 max-w-md w-full">
+              <input aria-label="Email" type="email" placeholder="Email..." className="w-full sm:flex-1 rounded-full px-4 py-3 text-sm text-[#1a0841] outline-none" />
+              <button type="submit" className="bg-[#6c4cf7] text-white px-6 py-3 rounded-full text-sm w-full sm:w-auto">Submit</button>
             </form>
           </div>
         </div>

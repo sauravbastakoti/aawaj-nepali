@@ -86,7 +86,7 @@ export default function People() {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.id}
-              className="snap-start flex-shrink-0 w-[320px] md:w-[360px] bg-white text-[#231a3a] rounded-lg p-6 shadow-lg"
+              className="snap-start flex-shrink-0 w-72 sm:w-80 md:w-[360px] bg-white text-[#231a3a] rounded-lg p-6 shadow-lg"
             >
               <h3 className="text-indigo-600 font-medium mb-3">{t.title}</h3>
               <p className="text-sm text-gray-600 mb-6">{t.quote}</p>

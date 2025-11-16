@@ -45,9 +45,9 @@ export default function Skill() {
 
           {/* Right image - clipped corner + fold */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-[420px] md:w-[520px] lg:w-[560px]">
+            <div className="relative w-full max-w-[420px] md:max-w-[520px] lg:max-w-[560px]">
               <div
-                className="rounded-2xl overflow-hidden shadow-xl h-[360px] md:h-[460px] lg:h-[600px]"
+                className="rounded-2xl overflow-hidden shadow-xl h-64 md:h-[460px] lg:h-[600px]"
                 style={{
                   borderRadius: '16px',
                   clipPath:

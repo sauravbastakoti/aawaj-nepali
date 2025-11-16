@@ -15,21 +15,21 @@ import Instructor from './Components/Instructor/Instructor'
 
 const App = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <NotificationBar />
-      <Hero/>
-  {/* <Flow/> */}
-  <Categories/>
-  <Courses />
-  <People />
-  <Stats />
-  <Skill />
-  <Learn />
-  <Instructor />
-  <Anywhere />
-  <Resources />
-      <Footer/>
-    </>
+      <Hero />
+      {/* <Flow/> */}
+      <Categories />
+      <Courses />
+      <People />
+      <Stats />
+      <Skill />
+      <Learn />
+      <Instructor />
+      <Anywhere />
+      <Resources />
+      <Footer />
+    </div>
   )
 }
 

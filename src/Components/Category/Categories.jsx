@@ -74,11 +74,11 @@ function IconPlaceholder() {
 			>
 				{categoriesData.map((c, i) => (
 					<article
-						key={i}
-						className="bg-[#eef3f7] rounded-lg w-60 min-w-[240px] py-8 px-5 flex flex-col items-center"
-						role="group"
-						aria-label={`${c.title} ${c.subtitle}`}
-					>
+							key={i}
+							className="bg-[#eef3f7] rounded-lg w-56 sm:w-60 min-w-[200px] py-8 px-5 flex flex-col items-center"
+							role="group"
+							aria-label={`${c.title} ${c.subtitle}`}
+						>
 						<div className="bg-white w-20 h-20 rounded-full flex items-center justify-center mb-4">
 							<IconPlaceholder />
 						</div>
