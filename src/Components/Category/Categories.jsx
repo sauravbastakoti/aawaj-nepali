@@ -64,7 +64,9 @@ function IconPlaceholder() {
 	}
 
 	return (
-		<section className="py-20 px-6 text-center" aria-label="Top categories" style={{ background: 'rgb(128 118 150)' }}>
+		// <section className="py-20 px-6 text-center" aria-label="Top categories" style={{ background: 'rgb(128 118 150)' }}>
+			
+		<section className="py-20 px-6 text-center" aria-label="Top categories" style={{ background: 'rgb(252 251 253)' }}>
 			<h2 className="text-2xl md:text-3xl font-extrabold text-[#231a3a] mb-1">Top Categories</h2>
 			<p className="text-gray-400 mb-8">Lorem ipsum dolor sit amet, consectetur.</p>
 
