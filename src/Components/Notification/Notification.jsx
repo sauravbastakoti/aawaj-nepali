@@ -53,82 +53,69 @@ const NotificationBar = () => {
 
 	return (
 		<>
-			<header className="fixed top-0 left-0 right-0 z-40 bg-[#1a0841] px-4 md:px-14 h-20 shadow-sm">
-				{/* logo placed absolutely at the viewport left so it stays flush */}
-				<div className="absolute left-3 md:left-6 top-1/2 transform -translate-y-1/2 flex items-center gap-3 z-50">
-					<div className="w-12 h-12 rounded-full bg-[#6c4cf7] flex items-center justify-center">
-						<svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#6c4cf7"/><path d="M10 16l4 4 8-8" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+			<header className="fixed top-0 left-0 right-0 z-40 bg-white px-4 md:px-8 h-20 border-b border-gray-200 shadow-sm">
+				<div className="max-w-7xl mx-auto h-full flex items-center justify-between">
+					{/* Logo */}
+					<div className="flex items-center gap-3 flex-shrink-0">
+						<div className="w-14 h-14 rounded-full bg-purple-600 flex items-center justify-center">
+							<svg width="36" height="36" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#9333ea"/><path d="M10 16l4 4 8-8" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+						</div>
+						<span className="text-purple-600 font-bold text-xl tracking-tight">Awaz-Nepal</span>
 					</div>
-					<span className="text-white font-bold text-lg tracking-tight">Awaz-Nepal</span>
-				</div>
-				{/* center content and limit width so header doesn't feel too wide on large screens */}
-				{/* add left padding so the centered nav doesn't get overlapped by the absolute logo */}
-				<div className="max-w-6xl mx-auto w-full relative pl-20 md:pl-28 flex items-center justify-between h-full">
-			{/* Center: Nav links (hidden on small screens) */}
-				<nav className="hidden md:flex flex-1 justify-center gap-8 h-full items-center">
-				<a href="#" className="text-[#7c6ad6] font-medium hover:text-white transition">Home <span className="ml-1">▼</span></a>
-				<a href="#" className="text-white font-medium hover:text-[#00e6a0] transition">Courses <span className="ml-1">▼</span></a>
-				<a href="#" className="text-white font-medium hover:text-[#00e6a0] transition">Events <span className="ml-1">▼</span></a>
-				<a href="#" className="text-white font-medium hover:text-[#00e6a0] transition">Blog <span className="ml-1">▼</span></a>
-				<a href="#" className="text-white font-medium hover:text-[#00e6a0] transition">Pages <span className="ml-1">▼</span></a>
-				<a href="#" className="text-white font-medium hover:text-[#00e6a0] transition">Contact</a>
-			</nav>
-			{/* Right: Search, Cart, Auth (hidden on very small screens) + mobile toggle */}
-				<div className="flex items-center gap-6 h-full">
-				<button className="hidden sm:inline text-white text-xl hover:text-[#00e6a0] transition inline-flex items-center h-full">
-					<svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-				</button>
-				<div className="hidden sm:relative sm:inline">
-					<button className="text-white text-xl hover:text-[#00e6a0] transition inline-flex items-center h-full">
-						<svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-13z"/><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/></svg>
-					</button>
-					<span className="absolute -top-2 -right-2 bg-[#ff3b5c] text-white text-xs font-bold rounded-full px-1">0</span>
-				</div>
-				<a href="#" className="hidden sm:inline text-white font-medium underline inline-flex items-center h-full">Log in</a>
-				<a href="#" className="hidden sm:inline ml-2 px-4 py-2 bg-white text-[#1a0841] rounded-md font-medium inline-flex items-center">Sign up</a>
 
-				{/* Mobile toggle button - pinned to the right so it can't overlap the logo/name */}
-				<button
-					className="md:hidden absolute right-3 top-1/2 transform -translate-y-1/2 z-50 inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/5"
-					aria-label="Open menu"
-					aria-expanded={open}
-					onClick={() => setOpen(true)}
-				>
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-				</button>
+				{/* Desktop Navigation - Center */}
+				<nav className="hidden md:flex flex-1 justify-center gap-6 xl:gap-10">
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition whitespace-nowrap text-sm uppercase">Home <span className="ml-1 text-xs">▼</span></a>
+					<a href="/about" className="text-gray-800 font-bold hover:text-purple-600 transition whitespace-nowrap text-sm uppercase">About Us</a>
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition whitespace-nowrap text-sm uppercase">Courses <span className="ml-1 text-xs">▼</span></a>
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition whitespace-nowrap text-sm uppercase">Events <span className="ml-1 text-xs">▼</span></a>
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition whitespace-nowrap text-sm uppercase">Blog <span className="ml-1 text-xs">▼</span></a>
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition whitespace-nowrap text-sm uppercase">Pages <span className="ml-1 text-xs">▼</span></a>
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition whitespace-nowrap text-sm uppercase">Contact</a>
+				</nav>
+
+				{/* Right Section - Auth */}
+				<div className="flex items-center gap-4 md:gap-5">
+				<div className="hidden sm:flex items-center gap-4">
+							<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition whitespace-nowrap text-sm uppercase">Log in</a>
+							<a href="#" className="px-5 py-2 bg-white text-purple-600 border border-purple-600 rounded-md font-bold hover:bg-purple-50 transition whitespace-nowrap text-sm uppercase">Sign up</a>
+						</div>
+
+						<button
+							className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 transition"
+							aria-label="Open menu"
+							aria-expanded={open}
+							onClick={() => setOpen(true)}
+						>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+						</button>
 					</div>
-					{/* end inner container */}
 				</div>
-				</header>
-			{/* spacer with same height as header to avoid content being hidden under fixed header */}
-			{/* increased on small screens to add breathing room under the fixed header */}
-			<div aria-hidden className="h-20 md:h-16" />
+			</header>
+			<div aria-hidden className="h-20" />
 
-			{/* Mobile sidebar panel + overlay */}
-				<div
-					className={`fixed inset-0 z-60 transition-opacity ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+			<div
+				className={`fixed inset-0 z-30 transition-opacity duration-300 ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
 				aria-hidden={!open}
 			>
-				{/* overlay */}
-				<div className={`absolute inset-0 bg-black/50 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`} />
+				<div className="absolute inset-0 bg-black/50" />
 
-				{/* panel */}
 				<aside
 					ref={panelRef}
 					role="dialog"
 					aria-label="Main menu"
 					tabIndex={-1}
-					className={`fixed top-0 right-0 bottom-0 w-3/4 max-w-sm bg-[#1a0841] text-white p-6 transform transition-transform ${open ? 'translate-x-0' : 'translate-x-full'}`}
+					className={`fixed top-0 right-0 bottom-0 w-3/4 max-w-sm bg-white text-gray-800 p-6 transform transition-transform duration-300 ${open ? 'translate-x-0' : 'translate-x-full'}`}
 				>
-					<div className="flex items-center justify-between mb-6">
-						<div className="flex items-center gap-3">
-							<div className="w-10 h-10 rounded-full bg-[#6c4cf7] flex items-center justify-center">
-								<svg width="24" height="24" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#6c4cf7"/><path d="M10 16l4 4 8-8" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+					<div className="flex items-center justify-between mb-6 pb-6 border-b border-gray-200">
+						<div className="flex items-center gap-2">
+							<div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0">
+								<svg width="24" height="24" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#9333ea"/><path d="M10 16l4 4 8-8" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
 							</div>
-							<span className="font-bold">Awaz-Nepal</span>
+							<span className="font-bold text-sm md:text-base text-purple-600">Awaz-Nepal</span>
 						</div>
 						<button
-							className="p-2 rounded-md text-white hover:bg-white/5"
+							className="p-2 rounded-md text-gray-700 hover:bg-gray-200 transition"
 							aria-label="Close menu"
 							onClick={() => setOpen(false)}
 						>
@@ -136,19 +123,20 @@ const NotificationBar = () => {
 						</button>
 					</div>
 
-					<nav className="flex flex-col gap-4">
-						<a href="#" className="text-[#d6ccff] font-medium">Home</a>
-						<a href="#" className="text-white font-medium">Courses</a>
-						<a href="#" className="text-white font-medium">Events</a>
-						<a href="#" className="text-white font-medium">Blog</a>
-						<a href="#" className="text-white font-medium">Pages</a>
-						<a href="#" className="text-white font-medium">Contact</a>
-					</nav>
+				<nav className="flex flex-col gap-4 mb-8">
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition py-2 uppercase text-sm">Home</a>
+					<a href="/about" className="text-gray-800 font-bold hover:text-purple-600 transition py-2 uppercase text-sm">About Us</a>
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition py-2 uppercase text-sm">Courses</a>
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition py-2 uppercase text-sm">Events</a>
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition py-2 uppercase text-sm">Blog</a>
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition py-2 uppercase text-sm">Pages</a>
+					<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition py-2 uppercase text-sm">Contact</a>
+				</nav>
 
-					<div className="mt-6 border-t border-white/10 pt-6 flex flex-col gap-3">
-						<a href="#" className="text-white font-medium underline">Log in</a>
-						<a href="#" className="px-4 py-2 bg-white text-[#1a0841] rounded-md font-medium inline-block w-max">Sign up</a>
-					</div>
+			<div className="flex flex-col gap-3">
+				<a href="#" className="text-gray-800 font-bold hover:text-purple-600 transition py-2 uppercase text-sm">Log in</a>
+				<a href="#" className="px-5 py-2 bg-white text-purple-600 border border-purple-600 rounded-md font-bold hover:bg-purple-50 transition text-center uppercase text-sm">Sign up</a>
+				</div>
 				</aside>
 			</div>
 		</>
