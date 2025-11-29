@@ -99,23 +99,23 @@ const Hero = () => {
 							{/* Left Main Image - Larger */}
 							<motion.div
 								className="absolute left-0 top-20 z-20"
-								animate={{
-									x: (mousePos.x - 0.5) * 30,
-									y: (mousePos.y - 0.5) * 30,
-								}}
-								transition={{ type: "spring", stiffness: 100, damping: 20 }}
-							>
-								<div className="w-72 h-96 md:w-80 md:h-full rounded-3xl overflow-hidden shadow-2xl border-8 border-white/20">
-									<img src={bigImage} alt="Main Speaker" className="object-cover w-full h-full" />
-								</div>
-							</motion.div>
+							animate={{
+								x: (mousePos.x - 0.5) * 50,
+								y: (mousePos.y - 0.5) * 50,
+							}}
+							transition={{ type: "spring", stiffness: 100, damping: 20 }}
+						>
+							<div className="w-72 h-96 md:w-80 md:h-full rounded-3xl overflow-hidden shadow-2xl border-8 border-white/20">
+								<img src={bigImage} alt="Main Speaker" className="object-cover w-full h-full" />
+							</div>
+						</motion.div>
 
 						{/* Top Right Image */}
 						<motion.div
 							className="absolute right-0 top-0 z-10"
 							animate={{
-								x: (mousePos.x - 0.5) * 45,
-								y: (mousePos.y - 0.5) * 45,
+								x: (mousePos.x - 0.5) * 50,
+								y: (mousePos.y - 0.5) * 50,
 							}}
 								transition={{ type: "spring", stiffness: 100, damping: 20 }}
 							>
@@ -140,10 +140,10 @@ const Hero = () => {
 
 						{/* Expert Trainer Card - Top Right */}
 						<motion.div
-							className="absolute top-0 -right-8 z-30"
+							className="absolute top-40 right-12 z-30"
 							animate={{
-								x: (mousePos.x - 0.5) * 35,
-								y: (mousePos.y - 0.5) * 35,
+								x: (mousePos.x - 0.5) * 50,
+								y: (mousePos.y - 0.5) * 50,
 							}}
 							transition={{ type: "spring", stiffness: 100, damping: 20 }}
 						>
@@ -165,8 +165,8 @@ const Hero = () => {
 							<motion.div
 								className="absolute bottom-32 left-0 z-30"
 								animate={{
-									x: (mousePos.x - 0.5) * 35,
-									y: (mousePos.y - 0.5) * 35,
+									x: (mousePos.x - 0.5) * 50,
+									y: (mousePos.y - 0.5) * 50,
 								}}
 								transition={{ type: "spring", stiffness: 100, damping: 20 }}
 							>
@@ -181,13 +181,13 @@ const Hero = () => {
 								</div>
 							</motion.div>
 
-						{/* Congratulations Card - Bottom Center */}
-						<motion.div
-							className="absolute bottom-0 right-24 z-30"
-							animate={{
-								x: (mousePos.x - 0.5) * 35,
-								y: (mousePos.y - 0.5) * 35,
-							}}
+							{/* Congratulations Card - Bottom Center */}
+							<motion.div
+								className="absolute bottom-0 right-24 z-30"
+								animate={{
+									x: (mousePos.x - 0.5) * 50,
+									y: (mousePos.y - 0.5) * 50,
+								}}
 								transition={{ type: "spring", stiffness: 100, damping: 20 }}
 							>
 								<div className="bg-white rounded-2xl shadow-2xl px-5 py-4 flex items-center gap-4 w-auto">
